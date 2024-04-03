@@ -1,0 +1,55 @@
+.first_app_header{
+    height: 12vh;
+    background-color: rgb(198, 200, 201);
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.register_actions{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+a{
+    cursor: pointer;
+}
+/* .user-popup {
+    box-shadow: inset 0px 1px 7px 0px white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 73px;
+    align-items: center;
+    visibility: hidden;
+}
+.user-popup:hover{
+    visibility: visible !important;
+} */
+.user-popup {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 2px 10px 0px #fff;
+	background-color: #fff;
+	cursor: pointer;
+	row-gap: 14px;
+	padding: 10px;
+	border: 1px solid #ccc;
+
+}
+
+.user-popup::before {
+    content: "";
+    position: absolute;
+    /* top: -17px; */
+    /* left: 50%; */
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #645d5d transparent;
+    top: 22px;
+    /* left: 91%; */
+    right: 41px;
+}

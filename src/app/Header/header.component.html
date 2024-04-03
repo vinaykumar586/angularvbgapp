@@ -1,0 +1,25 @@
+
+<header class="first_app_header">
+    <nav class="nav-bar">
+      <div class="home" style="cursor: pointer;">Home</div>
+      
+      <div *ngIf="!isLoggedIn" class="register_actions">
+      <div><a routerLink="/signup">Signup</a></div>
+      <div><a routerLink="/login">Login</a></div>
+    </div>
+    @if(isLoggedIn){
+        <div>
+            <div (mouseenter)="setShowProfile()" (mouseleave)="hideProfile()"><span>UserInfo</span>
+            <div *ngIf="showProfile" class="user-popup">
+        <user-info [receivedData]="inputTesting" (handleUpdateInputTest)="handleUpdateInputTest($event)"></user-info>
+        <div><a (click)="handleLogout()">Logout</a></div>
+    </div>
+    </div>
+    </div>
+    }
+    </nav>
+    </header>
+    <router-outlet>
+    </router-outlet>
+    
+    
